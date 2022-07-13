@@ -1,10 +1,5 @@
-import pandas as pd
-file_location = 'https://raw.githubusercontent.com/Tanvir19934/Graph-coloring-with-python/main/data/gc_70_1'
-input_data = pd.read_csv(file_location, header = None)
-import numpy as np
-from collections import defaultdict
-
-'''this is a greedy algorithm for graph coloring problem. The goal is to
+'''Description (also available in README) 
+this is a greedy algorithm for graph coloring problem. The goal is to
 color the graph using minimum number of colors such that no adjacent nodes 
 (or countries) is assigned the same color. The greedy algorithm first sorts
 all the nodes in a descending order according to their degrees. That is, the node
@@ -51,6 +46,11 @@ For example:
 denotes 5 color is needed in total. the solution is not proven to be
 optimal. the second line denotes the assigned color of each node'''
 
+import pandas as pd
+file_location = 'https://raw.githubusercontent.com/Tanvir19934/Graph-coloring-with-python/main/data/gc_70_1'
+input_data = pd.read_csv(file_location, header = None)
+import numpy as np
+from collections import defaultdict
 
 #parsing the input
 input_data = input_data.iloc[:,0].str.split(' ')
