@@ -1,1 +1,0 @@
-# Graph-coloring-with-python
