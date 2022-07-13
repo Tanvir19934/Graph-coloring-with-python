@@ -112,4 +112,4 @@ for i in sorted_node_relations: #iterate through the sorted nodes
 # prepare the solution in the specified output format
 output_data = str(max(assigned_colors.values())) + ' ' + str(0) + '\n'
 output_data += ' '.join(map(str, assigned_colors.values()))
-
+print(output_data)
