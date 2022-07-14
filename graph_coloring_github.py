@@ -78,9 +78,7 @@ values = list(values) #this gives an array of neighbors of all the nodes
 #sorting the nodes according to their degrees in descending order
 assigned_colors = {}
 for i in range(0,node_count):
-  assigned_colors[i] = -1
-assigned_colors[sorted_node_relations[0]]= 1 #initializing colors. node 0 is assigned the first color.
-#all others are unassigned as -1.
+  assigned_colors[i] = -1 #initializing colors as -1
 
 
 def isSafe(i,color):
@@ -102,7 +100,7 @@ def isSafe(i,color):
   return True
 
 for i in sorted_node_relations: #iterate through the sorted nodes
-  color = 2
+  color = 1
   while(1):
     if isSafe(i,color) == True:
       assigned_colors[i]=color
