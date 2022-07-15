@@ -8,48 +8,8 @@ same order.
 The algorithm wrapped in an outer loop that simply repeats the algorithm a number 
 of times and returns the best found result. Then it assigns the smallest possible 
 color to a node such that no conflict arises between thenode in consideration and 
-its neighbors'''
+its neighbors. The full problem description is available in README'''
 
-'''the input is in the form of-
-
-nodes edges
-u_1 v_1
-u_2 v_2
-.......
-.......
-u_nodes v_nodes
-
-nodes = number of total nodes
-edges = number of total edges
-u_1 v_1 denotes that there is an arc between nodes u_1 and v_1, that is,
-nodes u_1 and v_1 are neighbors.
-
-For example:
-
-4 3
-0 1
-1 2
-1 3
-
-means there are 4 nodes and 3 edges. node (0,1), (1,2), and (1,3) are neighbors.
-
-The output is in the form of-
-obj opt
-c_1 c_2..............c_node
-
-obj = total number of colors used
-opt = a flag indicating whether the solution is optimal or not. opt = 0 if not 
-optimal, opt = 1 if optimality is proven.
-c_1 is the assigned color of node 1 and so on...
-
-For example:
-5 0\n
-1 2 3 2 2 2 3 3 3 2 2 4 3 3 3 2 4 5 2 2
-
-denotes 5 color is needed in total. the solution is not proven to be
-optimal. the second line denotes the assigned color of each node'''
-
-#parsing the input
 #this is for accessing github data
 import pandas as pd
 file_location = 'https://raw.githubusercontent.com/Tanvir19934/Graph-coloring-with-python/main/data/gc_70_7'
@@ -57,7 +17,7 @@ input_data = pd.read_csv(file_location, header = None)
 import numpy as np
 from collections import defaultdict
 
-
+#parsing the input
 input_data = input_data.iloc[:,0].str.split(' ')
 node_count = int(input_data[0][0])
 edge_count = int(input_data[0][1])
